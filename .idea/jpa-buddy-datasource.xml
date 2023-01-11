@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpbDataSourceConfig">
+    <data-sources>
+      <data-source id="631a4b48-4383-42a9-93b7-249d58444514" name="4eggsample" url="jdbc:mysql://localhost/4egg?useSSL=false&amp;allowMultiQueries=true&amp;serverTimezone=UTC" driverClass="com.mysql.cj.jdbc.Driver" />
+    </data-sources>
+  </component>
+</project>

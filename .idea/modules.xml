@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/4egg.iml" filepath="$PROJECT_DIR$/.idea/4egg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4egg-backend/4egg-sample-app.iml" filepath="$PROJECT_DIR$/4egg-backend/4egg-sample-app.iml" />
     </modules>
   </component>
 </project>
