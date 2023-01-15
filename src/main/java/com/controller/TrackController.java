@@ -1,4 +1,5 @@
 package com.controller;
+import com.TrackDto.TrackDto;
 import com.model.Track;
 import com.service.TrackService;
 import org.springframework.web.bind.annotation.*;
@@ -24,19 +25,33 @@ final TrackService trackService;
 
     @CrossOrigin
     @PostMapping
-    public Track save( @RequestBody ItemDto itemDto )
+    public Track save( @RequestBody TrackDto trackDto )
     {
-        return itemService.save( new Item( itemDto ) );
+        return trackService.save( new Track(trackDto.getID()) );
     }
 
 
-    @GetMapping("/tracks/{id}")
-    private Track findById(@PathVariable Integer id )
+    @GetMapping("/{id}")
+    public Track findById(@PathVariable Integer id )
     {
         return trackService.findById(id);
     }
 
-    @PostMapping
+    @PutMapping( "/{id}" )
+    public Track update( @RequestBody TrackDto trackDto, @PathVariable Integer id )
+    {
+        Track track = trackService.findById( id );
+        track.setName( trackDto.getName() );
+        track.setNotes( trackDto.getNotes() );
+
+        return trackService.save( track );
+    }
+
+    @DeleteMapping( "/{id}" )
+    public void delete( @PathVariable Integer id )
+    {
+       trackService.delete( id );
+    }
 
 
 }
