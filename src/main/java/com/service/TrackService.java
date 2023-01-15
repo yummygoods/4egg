@@ -11,19 +11,31 @@ import java.util.Optional;
 public class TrackService {
 
     private final TrackRepository trackRepository;
-    public TrackService(TrackRepository trackRepository){
+
+    public TrackService(TrackRepository trackRepository) {
         this.trackRepository = trackRepository;
     }
 
-    public Track save(Track track){
-        return  trackRepository.save(track);
+    public Track save(Track track) {
+        return trackRepository.save(track);
     }
 
-    public void delete(Integer id){
+    public void delete(Integer id) {
         trackRepository.deleteById(id);
     }
 
     public List<Track> getAll() {
         return trackRepository.findAll();
     }
+
+    public Track findById(Integer id) {
+        Optional<Track> track = trackRepository.findById(id);
+        boolean isPresent = track.isPresent();
+        if (isPresent) {
+            return track.get();
+        } else {
+            return null;
+        }
+    }
 }
+

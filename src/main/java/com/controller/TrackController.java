@@ -17,9 +17,26 @@ final TrackService trackService;
     }
 
     @GetMapping("/tracks")
-    private List<Track> getAllTracks()
+   public Iterable<Track> getAllTracks()
     {
-        return trackService.getAllTracks();
+        return trackService.getAll();
     }
+
+    @CrossOrigin
+    @PostMapping
+    public Track save( @RequestBody ItemDto itemDto )
+    {
+        return itemService.save( new Item( itemDto ) );
+    }
+
+
+    @GetMapping("/tracks/{id}")
+    private Track findById(@PathVariable Integer id )
+    {
+        return trackService.findById(id);
+    }
+
+    @PostMapping
+
 
 }
