@@ -1,4 +1,4 @@
-package com.model;
+package com.yummygoods.eggsampleapp.model;
 
 import jakarta.persistence.*;
 

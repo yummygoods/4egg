@@ -1,8 +1,7 @@
-package com.service;
+package com.yummygoods.eggsampleapp.service;
 
-import com.model.Track;
-import com.repository.TrackRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.yummygoods.eggsampleapp.model.Track;
+import com.yummygoods.eggsampleapp.repository.TrackRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
