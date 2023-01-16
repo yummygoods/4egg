@@ -1,10 +1,9 @@
 package com.controller;
+
 import com.TrackDto.TrackDto;
 import com.model.Track;
 import com.service.TrackService;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api")
@@ -15,29 +14,30 @@ final TrackService trackService;
 
     public TrackController(TrackService trackService) {
         this.trackService = trackService;
+
     }
 
-    @GetMapping("/tracks")
+    @GetMapping("/api/tracks")
    public Iterable<Track> getAllTracks()
     {
         return trackService.getAll();
     }
 
     @CrossOrigin
-    @PostMapping
+    @PostMapping("/api/tracks")
     public Track save( @RequestBody TrackDto trackDto )
     {
         return trackService.save( new Track(trackDto.getID()) );
     }
 
 
-    @GetMapping("/{id}")
+    @GetMapping("api/tracks/{id}")
     public Track findById(@PathVariable Integer id )
     {
         return trackService.findById(id);
     }
 
-    @PutMapping( "/{id}" )
+    @PutMapping( "api/tracks/{id}" )
     public Track update( @RequestBody TrackDto trackDto, @PathVariable Integer id )
     {
         Track track = trackService.findById( id );
@@ -47,7 +47,7 @@ final TrackService trackService;
         return trackService.save( track );
     }
 
-    @DeleteMapping( "/{id}" )
+    @DeleteMapping( "api/tracks/{id}" )
     public void delete( @PathVariable Integer id )
     {
        trackService.delete( id );
