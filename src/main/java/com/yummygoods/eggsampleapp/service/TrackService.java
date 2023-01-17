@@ -2,6 +2,7 @@ package com.yummygoods.eggsampleapp.service;
 
 import com.yummygoods.eggsampleapp.model.Track;
 import com.yummygoods.eggsampleapp.repository.TrackRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
@@ -11,7 +12,7 @@ public class TrackService {
 
     private final TrackRepository trackRepository;
 
-    public TrackService(TrackRepository trackRepository) {
+    public TrackService(@Autowired TrackRepository trackRepository) {
         this.trackRepository = trackRepository;
     }
 
