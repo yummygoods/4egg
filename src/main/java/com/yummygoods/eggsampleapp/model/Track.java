@@ -1,5 +1,6 @@
 package com.yummygoods.eggsampleapp.model;
 
+import com.yummygoods.eggsampleapp.TrackDto.TrackDto;
 import jakarta.persistence.*;
 
 @Entity
@@ -10,9 +11,7 @@ public class Track{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false, updatable = false)
-    private Integer ID;
-
-
+    private Integer id;
 
     @Column
     public String name;
@@ -27,21 +26,24 @@ public class Track{
     public Track() {
     }
 //basic constructor
-    public Track(Integer ID){
-        this.ID = ID;
+    public Track(TrackDto trackDto){
+        this.id = trackDto.id;
+        this.name = trackDto.name;
+        this.notes = trackDto.notes;
+
 
     }
 
     //getter
     public Integer getID() {
-        return ID;
+        return id;
     }
 
     //toString method
     @Override
     public String toString() {
         return "Track{" +
-                       "ID=" + ID +
+                       "ID=" + id +
                        '}';
     }
 // how to handle setter when it's not updatable?

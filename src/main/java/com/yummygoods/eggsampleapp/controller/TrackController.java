@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/")
 public class TrackController {
 
-    TrackRepository trackRepository;
+   final TrackRepository trackRepository;
 final TrackService trackService;
 
     public TrackController(@Autowired TrackService trackService, @Autowired TrackRepository trackRepository) {
@@ -20,19 +20,21 @@ final TrackService trackService;
 
     }
 
-    @GetMapping(value = "/tracks")
+    @GetMapping(value = "/tracks/all")
    public Iterable<Track> getAllTracks()
     {
-        System.out.println("wtf ??");
+        System.out.println("this should get all tracks");
         return trackService.getAll();
 
     }
+
+
 
     @CrossOrigin
     @PostMapping(value = "/tracks")
     public Track save( @RequestBody TrackDto trackDto )
     {
-        return trackService.save( new Track(trackDto.ID()) );
+        return trackService.save( new Track(trackDto) );
     }
 
 
@@ -46,11 +48,11 @@ final TrackService trackService;
     public Track update( @RequestBody TrackDto trackDto, @PathVariable Integer id )
     {
         Track track = trackService.findById( id );
-        track.setName( trackDto.name() );
-        track.setNotes( trackDto.notes() );
-
+        track.setName( trackDto.getName() );
+        track.setNotes( trackDto.getNotes() );
         return trackService.save( track );
     }
+
 
     @DeleteMapping(value = "/tracks/{id}")
     public void delete( @PathVariable Integer id )
