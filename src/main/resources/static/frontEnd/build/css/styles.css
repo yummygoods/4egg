@@ -46,6 +46,31 @@ h6 {
 	isolation: isolate;
 }
 
-h1{
-color: red;
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+    padding: 8px;
+  }
+
+
+ a {
+  color: #f39121;
+  }
+a:hover  {
+ color: pink;
+}
+  .container {
+    align-items: center;
+    padding: 5px 20px 15px 20px;
+    border-radius: 3px;
+    text-align: center;
+  }
+
+.card-title{
+}
+
+.card-text{
+}
+
+.card-body{
 }

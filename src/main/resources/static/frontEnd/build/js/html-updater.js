@@ -3,8 +3,8 @@ console.log("🦄 you're a god damn unicorn")
 //function to populate html with json of track retrieved from database
 function addTrackCard(track) {
     const trackHTML =
-     '<div class="col-6 ">\n' +
-        '<div class="card border-warning mx-2 min-">\n' +
+     '<div class="container">\n' +
+        '<div class="container">\n' +
 
             //  '<img src="' +  track.locationUrl + ' " class="card-img-top" alt="...">\n' +
 
