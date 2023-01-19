@@ -1,30 +1,4 @@
 
-localStorage.setItem('track' , JSON.stringify(data))
-// object/class to capture form input
-class Track {
-  constructor(trackName) {
-    this.trackName = trackName;
-    this.trackNotes = trackNotes;
-
-  }
-
-}
-console.log(Track);
-//function to take form input and turn into object
-
-const trackFromForm = new Track();
-function addFromForm() {
-  trackFromForm.trackName = document.getElementById("trackName").value;
-  trackFromForm.trackNotes = document.getElementById("trackNotes").value;
-  console.log("function to create a new track from form input");
-  console.log(trackFromForm);
-}
-
-//event listener to capture form data on submit
-
-let button = document.getElementById('button');
-button.addEventListener('click', addFromForm);
-
 
 //turns new track object into json and sends to server  post request, returns promise and parses the json into response object
 fetch('/tracks', {
@@ -47,24 +21,8 @@ fetch('/tracks', {
 
 
 
-/*
-fetch('/track-form', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-
-}).then(response=>response.json()).then(tracksArray=>{
-
-    for (let track of tracksArray) {
 
 
-        addtrackCard(track);
-    }
-}
-).catch((error)=>{
-    console.error('Error:', error);
-}
-);*
-*/
-
+//event listener to capture form data on submit
+let button = document.getElementById('button');
+button.addEventListener('submit', submitForm);
