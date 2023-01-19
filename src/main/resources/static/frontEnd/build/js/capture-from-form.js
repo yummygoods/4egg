@@ -1,42 +1,42 @@
-
 // object/class to capture form input
-item(name, description, imageUrl, price) {
-      const item = {
-        this.name: name,
-        this.description: description,
-        this.imageUrl: imageUrl,
-        this.price: price,
-      };
+class Track {
+  constructor(trackName) {
+    this.trackName = trackName;
+    this.trackNotes = trackNotes;
 
-//function to take form input and turn into object
-function addFromForm() {
-const itemFromForm = new item();
-itemFromForm.name = document.getElementById("name").value;
-itemFromForm.description = document.getElementById("description").value;
-itemFromForm.imageUrl = document.getElementById("imageUrl").value;
-itemFromForm.price = document.getElementById("price").value;
+  }
+
 }
+console.log(Track);
+//function to take form input and turn into object
 
+const trackFromForm = new Track();
+function addFromForm() {
+  trackFromForm.trackName = document.getElementById("trackName").value;
+  trackFromForm.trackNotes = document.getElementById("trackNotes").value;
+  console.log("function to create a new track from form input");
+  console.log(trackFromForm);
+}
 
 //event listener to capture form data on submit
 
 let button = document.getElementById('button');
-button.addEventListener('click', addFromForm);
+button.addEventListener('click', addFromForm());
 
 
-
-// call to  get all items, turn them into json, and use that info to populate card html
-fetch('/item-form', {
+//turns new track object into json and sends to server  post request, returns promise and parses the json into response object
+fetch('/tracks', {
   method: 'POST',
   headers: {
-          'Content-Type': 'application/json',
-      },
-  body: JSON.stringify({itemFromForm})
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify('{trackFromForm}')
 }).then(response => {
-  if(response.ok){
-	  return response.json();
+  if (response.ok) {
+    return response.json();
+    
   }
-	throw new Error('Request failed!');
+  throw new Error('Request failed!');
 }, networkError => {
   console.log(networkError.message);
 }).then(jsonResponse => {
@@ -46,18 +46,18 @@ fetch('/item-form', {
 
 
 /*
-fetch('/item-form', {
+fetch('/track-form', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
     },
 
-}).then(response=>response.json()).then(itemsArray=>{
+}).then(response=>response.json()).then(tracksArray=>{
 
-    for (let item of itemsArray) {
+    for (let track of tracksArray) {
 
 
-        addItemCard(item);
+        addtrackCard(track);
     }
 }
 ).catch((error)=>{

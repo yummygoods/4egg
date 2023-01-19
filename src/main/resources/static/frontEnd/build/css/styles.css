@@ -10,14 +10,9 @@
 * {
 	margin: 0;
 }
-html,
-body {
-	height: 100%;
-}
-body {
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
-}
+
+
+
 img,
 picture,
 video,
@@ -48,8 +43,10 @@ h6 {
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 17px;
-    padding: 8px;
+    font-size: 1rem;
+    padding: 4rem;
+    display: flex;
+
   }
 
 
@@ -61,9 +58,16 @@ a:hover  {
 }
   .container {
     align-items: center;
-    padding: 5px 20px 15px 20px;
+    padding: 1rem;
     border-radius: 3px;
     text-align: center;
+
+      display: flex;
+
+      flex-flow: column ;
+      align-content: center;
+
+    }
   }
 
 .card-title{
@@ -73,4 +77,69 @@ a:hover  {
 }
 
 .card-body{
+}
+
+span{
+  text-align:center;
+  font-size: 1.5rem;
+  display: block;
+  padding-bottom: .5rem;
+}
+
+
+
+
+::placeholder {
+  color: rgba(245, 166, 97, .75);
+  text-align: center;
+  font-size: .75rem;
+}
+
+
+
+
+form {
+  width: 10rem;
+  height: 10rem;
+  margin: auto;
+  justify-content: space-around;
+  display: flex;
+
+
+}
+label{
+font-size: .75rem;
+}
+
+input, textarea {
+
+min-height: 2rem;
+margin-top: 1rem;
+  text-align: center;
+  color: purple;
+  border-color: black;
+  border-width: 2px;
+
+}
+
+button {
+  color: white;
+  background-color: purple;
+  border: none;
+  border-radius: 1px;
+  margin-top: 1rem;
+
+
+
+}
+
+.smol{
+
+  font-size: .5rem ;
+  padding: .5rem;
+  color: black;
+}
+
+#message{
+  color: white;
 }

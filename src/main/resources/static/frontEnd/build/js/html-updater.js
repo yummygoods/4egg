@@ -1,6 +1,7 @@
 console.log("🦄 you're a god damn unicorn")
 
 //function to populate html with json of track retrieved from database
+/*
 function addTrackCard(track) {
     const trackHTML =
      '<div class="container">\n' +
@@ -26,9 +27,11 @@ function addTrackCard(track) {
     tracksContainer.innerHTML += trackHTML;
     console.log("updating inner html")
 }
+*/
 
 
 // call to  get all tracks, turn them into json, and use that info to populate card html
+/*
 fetch('/tracks/all', {
     method: 'GET',
     headers: {
@@ -47,4 +50,5 @@ fetch('/tracks/all', {
     console.error('Error:', error);
 }
 );
+*/
 
