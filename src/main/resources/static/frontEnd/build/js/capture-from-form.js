@@ -1,3 +1,5 @@
+
+localStorage.setItem('track' , JSON.stringify(data))
 // object/class to capture form input
 class Track {
   constructor(trackName) {
@@ -21,7 +23,7 @@ function addFromForm() {
 //event listener to capture form data on submit
 
 let button = document.getElementById('button');
-button.addEventListener('click', addFromForm());
+button.addEventListener('click', addFromForm);
 
 
 //turns new track object into json and sends to server  post request, returns promise and parses the json into response object
