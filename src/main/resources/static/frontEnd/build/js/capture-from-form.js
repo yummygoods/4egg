@@ -7,8 +7,9 @@ class Track {
     this.trackNotes = trackNotes;
 }
   }
-let trackName = document.getElementById('trackName').value;
- let trackNotes = document.getElementById('trackNotes').value;
+  let trackName = document.getElementById('trackName');
+/*let trackName = document.getElementById('trackName').value;
+ let trackNotes = document.getElementById('trackNotes').value;*/
  console.log(trackName);
  console.log(trackNotes);
 
@@ -19,9 +20,10 @@ let trackName = document.getElementById('trackName').value;
 //event listener to capture form data on submit
 
 let button = document.getElementById('button');
-button.addEventListener('click', addFromForm());
+button.addEventListener('click', addFromForm);
+console.log("wtf?");
 
-
+/*
 //turns new track object into json and sends to server  post request, returns promise and parses the json into response object
 fetch('/tracks', {
   method: 'POST',
@@ -40,4 +42,5 @@ fetch('/tracks', {
 }).then(jsonResponse => {
   console.log(jsonResponse);
 })
+*/
 
