@@ -1,3 +1,25 @@
+//function to take form input and turn into object
+function addFromForm() {
+  // object/class to capture form input
+class Track {
+  constructor(trackName, trackNotes) {
+    this.trackName = trackName;
+    this.trackNotes = trackNotes;
+}
+  }
+let trackName = document.getElementById('trackName').value;
+ let trackNotes = document.getElementById('trackNotes').value;
+ console.log(trackName);
+ console.log(trackNotes);
+
+  const trackFromForm = new Track(trackName, trackNotes);
+  console.log("function to create a new track from form input");
+  console.log(trackFromForm);
+}
+//event listener to capture form data on submit
+
+let button = document.getElementById('button');
+button.addEventListener('click', addFromForm());
 
 
 //turns new track object into json and sends to server  post request, returns promise and parses the json into response object
@@ -10,7 +32,7 @@ fetch('/tracks', {
 }).then(response => {
   if (response.ok) {
     return response.json();
-    
+
   }
   throw new Error('Request failed!');
 }, networkError => {
@@ -19,10 +41,3 @@ fetch('/tracks', {
   console.log(jsonResponse);
 })
 
-
-
-
-
-//event listener to capture form data on submit
-let button = document.getElementById('button');
-button.addEventListener('submit', submitForm);
