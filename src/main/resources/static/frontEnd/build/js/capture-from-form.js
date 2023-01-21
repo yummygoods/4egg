@@ -1,7 +1,11 @@
 //event listener to capture form data on submit
 
 let button = document.getElementById('button');
-button.addEventListener('click', addFromForm);
+button.addEventListener('click', function(event) {
+                                     event.preventDefault();
+                                     addFromForm();
+                                 });
+
 
   // object/class to capture form input
 class Track {
@@ -10,6 +14,9 @@ class Track {
     this.trackNotes = trackNotes;
 }
 }
+
+console.log("this should print the newly created class Track:" + Track);
+
 //function to take form input and turn into object
 
 function addFromForm() {
