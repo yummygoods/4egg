@@ -32,6 +32,8 @@ let trackNotes = document.getElementById('trackNotes').value;
 
   console.log("this should print the new track object with values:" + trackFromForm);
 
+  //reset the form to clear data once it has been stored in the variables
+ form.reset();
 
 }
 
