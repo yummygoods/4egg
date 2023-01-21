@@ -3,25 +3,27 @@
 let button = document.getElementById('button');
 button.addEventListener('click', addFromForm);
 
-//function to take form input and turn into object
-function addFromForm() {
   // object/class to capture form input
 class Track {
   constructor(trackName, trackNotes) {
     this.trackName = trackName;
     this.trackNotes = trackNotes;
-}
-  }
-  let trackName = document.getElementById('trackName');
-/*let trackName = document.getElementById('trackName').value;
- let trackNotes = document.getElementById('trackNotes').value;*/
- console.log(trackName);
- console.log(trackNotes);
 
+//function to take form input and turn into object
+
+function addFromForm() {
+//takes input values and saves as variables trackName + trackNotes
+let trackName = document.getElementById('trackName').value;
+ console.log("this should print the value from user input in Name field:" + trackName);
+let trackNotes = document.getElementById('trackNotes').value;
+ console.log("this should print the value from user input in Notes field" + trackNotes);
+
+//instantiates new Track object and passes variables defined above as arguments into the constructor
   const trackFromForm = new Track(trackName, trackNotes);
-  console.log("function to create a new track from form input");
-  console.log("this should print the new track object with values" + trackFromForm);
-console.log("this is what the new track object looks like:" + trackFromForm);
+
+
+  console.log("this should print the new track object with values:" + trackFromForm);
+
 
 }
 
