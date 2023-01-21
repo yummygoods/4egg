@@ -3,11 +3,11 @@
 ++++++++++++++++++++++++++++++++++++++++++++++++*/
 function reset() {
   //.................................tells the dom to remove the user's text input
-  document.getElementById('trackName').value = '';
-  document.getElementById('trackNotes').value = '';
+  document.getElementById('name').value = '';
+  document.getElementById('notes').value = '';
   //.................................resets the values stored in the variables
-  trackName = '';
-  trackNotes = '';
+  name = '';
+  notes = '';
 };
 
 ///////////////////// end of function ////////////////////
@@ -31,9 +31,9 @@ button.addEventListener('click', function (event) {
 class to capture form input in an object
 ++++++++++++++++++++++++++++++++++++++++++++++++*/
 class Track {
-  constructor(trackName, trackNotes) {
-    this.trackName = trackName;
-    this.trackNotes = trackNotes;
+  constructor(name, notes) {
+    this.name = name;
+    this.notes = notes;
   }
 }
 
@@ -46,15 +46,15 @@ console.log("this should print the newly created class Track: ", Track);
 function to take form input and turn into object
 ++++++++++++++++++++++++++++++++++++++++++++++++*/
 function addFromForm() {
-  // .................................takes input values and saves as variables trackName + trackNotes
-  let trackName = document.getElementById('trackName').value;
-  console.log("this should print the value from user input in Name field:", trackName);
+  // .................................takes input values and saves as variables name + notes
+  let name = document.getElementById('name').value;
+  console.log("this should print the value from user input in Name field:", name);
 
-  let trackNotes = document.getElementById('trackNotes').value;
-  console.log("this should print the value from user input in Notes field: ", trackNotes);
+  let notes = document.getElementById('notes').value;
+  console.log("this should print the value from user input in Notes field: ", notes);
 
   // .................................instantiates new Track object and passes variables defined above as arguments into the constructor
-  const trackFromForm = new Track(trackName, trackNotes);
+  const trackFromForm = new Track(name, notes);
   console.log("this should print the new track object with values:", trackFromForm);
 
   // .................................calls function to take the new track object and make a post request with it
