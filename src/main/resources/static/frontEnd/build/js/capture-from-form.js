@@ -15,25 +15,25 @@ class Track {
 }
 }
 
-console.log("this should print the newly created class Track:" + Track);
+console.log("this should print the newly created class Track: ", Track);
 
 //function to take form input and turn into object
 
 function addFromForm() {
 //takes input values and saves as variables trackName + trackNotes
 let trackName = document.getElementById('trackName').value;
- console.log("this should print the value from user input in Name field:" + trackName);
+ console.log("this should print the value from user input in Name field:", trackName);
 let trackNotes = document.getElementById('trackNotes').value;
- console.log("this should print the value from user input in Notes field" + trackNotes);
+ console.log("this should print the value from user input in Notes field: ", + trackNotes);
 
 //instantiates new Track object and passes variables defined above as arguments into the constructor
-  const trackFromForm = new Track(trackName.value, trackNotes.value);
+  const trackFromForm = new Track(trackName, trackNotes);
 
 
-  console.log("this should print the new track object with values:" + trackFromForm);
+  console.log("this should print the new track object with values:", trackFromForm);
 
   //reset the form to clear data once it has been stored in the variables
- form.reset();
+ //form.reset();
 
 }
 
