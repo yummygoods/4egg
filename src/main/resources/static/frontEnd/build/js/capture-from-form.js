@@ -8,7 +8,8 @@ class Track {
   constructor(trackName, trackNotes) {
     this.trackName = trackName;
     this.trackNotes = trackNotes;
-
+}
+}
 //function to take form input and turn into object
 
 function addFromForm() {
@@ -29,6 +30,7 @@ let trackNotes = document.getElementById('trackNotes').value;
 
 
 /*
+
 //turns new track object into json and sends to server  post request, returns promise and parses the json into response object
 fetch('/tracks', {
   method: 'POST',
@@ -47,5 +49,6 @@ fetch('/tracks', {
 }).then(jsonResponse => {
   console.log(jsonResponse);
 })
+
 */
 
