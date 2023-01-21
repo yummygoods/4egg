@@ -27,7 +27,7 @@ let trackNotes = document.getElementById('trackNotes').value;
  console.log("this should print the value from user input in Notes field" + trackNotes);
 
 //instantiates new Track object and passes variables defined above as arguments into the constructor
-  const trackFromForm = new Track(trackName, trackNotes);
+  const trackFromForm = new Track(trackName.value, trackNotes.value);
 
 
   console.log("this should print the new track object with values:" + trackFromForm);
