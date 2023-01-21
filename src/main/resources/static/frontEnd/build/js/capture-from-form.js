@@ -2,7 +2,6 @@
 
 let button = document.getElementById('button');
 button.addEventListener('click', addFromForm);
-console.log("this is what the new track object looks like:" + trackFromForm);
 
 //function to take form input and turn into object
 function addFromForm() {
@@ -22,6 +21,8 @@ class Track {
   const trackFromForm = new Track(trackName, trackNotes);
   console.log("function to create a new track from form input");
   console.log("this should print the new track object with values" + trackFromForm);
+console.log("this is what the new track object looks like:" + trackFromForm);
+
 }
 
 
