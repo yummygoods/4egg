@@ -1,3 +1,9 @@
+//event listener to capture form data on submit
+
+let button = document.getElementById('button');
+button.addEventListener('click', addFromForm);
+console.log("this is what the new track object looks like:" + trackFromForm);
+
 //function to take form input and turn into object
 function addFromForm() {
   // object/class to capture form input
@@ -15,13 +21,9 @@ class Track {
 
   const trackFromForm = new Track(trackName, trackNotes);
   console.log("function to create a new track from form input");
-  console.log(trackFromForm);
+  console.log("this should print the new track object with values" + trackFromForm);
 }
-//event listener to capture form data on submit
 
-let button = document.getElementById('button');
-button.addEventListener('click', addFromForm);
-console.log("wtf?");
 
 /*
 //turns new track object into json and sends to server  post request, returns promise and parses the json into response object
