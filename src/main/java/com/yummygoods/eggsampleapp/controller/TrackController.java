@@ -7,6 +7,7 @@ import com.yummygoods.eggsampleapp.service.TrackService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin
 @RestController
 @RequestMapping(value = "/")
 public class TrackController {
@@ -30,7 +31,7 @@ final TrackService trackService;
 
 
 
-    @CrossOrigin
+
     @PostMapping(value = "/tracks")
     public Track save( @RequestBody TrackDto trackDto )
     {
