@@ -12,4 +12,8 @@ function getAllTracks() {
     .catch(error => console.log(error));
 }
 
+
 window.onload = getAllTracks();
+
+
+
