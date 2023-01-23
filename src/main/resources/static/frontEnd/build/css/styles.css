@@ -1,0 +1,145 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+}
+
+
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+#root,
+#__next {
+	isolation: isolate;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+    padding: 4rem;
+    display: flex;
+
+  }
+
+
+ a {
+  color: #f39121;
+  }
+a:hover  {
+ color: pink;
+}
+  .container {
+    align-items: center;
+    padding: 1rem;
+    border-radius: 3px;
+    text-align: center;
+
+      display: flex;
+
+      flex-flow: column ;
+      align-content: center;
+
+    }
+  }
+
+.card-title{
+}
+
+.card-text{
+}
+
+.card-body{
+}
+
+span{
+  text-align:center;
+  font-size: 1.5rem;
+  display: block;
+  padding-bottom: .5rem;
+}
+
+
+
+
+::placeholder {
+  color: rgba(245, 166, 97, .75);
+  text-align: center;
+  font-size: .75rem;
+}
+
+
+
+
+form {
+  width: 10rem;
+  height: 10rem;
+  margin: auto;
+  justify-content: space-around;
+  display: flex;
+
+
+}
+label{
+font-size: .75rem;
+}
+
+input, textarea {
+
+min-height: 2rem;
+margin-top: 1rem;
+  text-align: center;
+  color: purple;
+  border-color: black;
+  border-width: 2px;
+
+}
+
+button {
+  color: white;
+  background-color: purple;
+  border: none;
+  border-radius: 1px;
+  margin-top: 1rem;
+
+
+
+}
+
+.smol{
+
+  font-size: .5rem ;
+  padding: .5rem;
+  color: black;
+}
+
+#message{
+  color: white;
+}
