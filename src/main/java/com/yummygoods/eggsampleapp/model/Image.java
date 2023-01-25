@@ -1,10 +1,12 @@
 package com.yummygoods.eggsampleapp.model;
 
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Lob;
 import org.springframework.data.annotation.Id;
 
+@Entity
 public class Image {
 
     @Id
@@ -15,6 +17,9 @@ public class Image {
     byte[] content;
 
     String name;
+    String location;
+
+
 
     public Long getId() {
         return id;
@@ -39,4 +44,14 @@ public class Image {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+
 }
