@@ -13,31 +13,44 @@
 
 
 		<body class="container">
-		<!--
- Main heading with the statement “Input your information”(5pts)
--->
-		<section class="container">
-			<header>
+
+
+			<header id="addTrackHeader">
 				<h1>add a new track</h1>
+				<span class="smol">i hope it's real weird</span>
+				<span>🌈❤️</span>
 			</header>
 
-			<span class="smol">i hope it's real weird</span>
-			<span>🌈❤️</span>
 
-			<form class="container" action="">
+<section>
+			<form class="container" enctype="multipart/form-data">
 
-				<label for="name" >name</label>
+				<label for="name" >track name:</label>
 				<input name="name" autocomplete="off"  type="text" id="name"/>
-				<label for="notes" >notes</label>
+				<label for="notes" >notes:</label>
 				<textarea name="notes" id="notes"></textarea>
-				<button id="button" type="submit">SUBMIT</button>
+				<label for="trackUpload" >select audio file:</label>
+				<input name="track" type="file" id="trackUpload"   accept=".mp3, .mp4 "/>
+				<!--style="opacity: 0;"-->
 
+
+				<label for=imageUpload>select image file:</label>
+				<input name="image" type="file" id="imageUpload" accept=".jpg, .jpeg, .png" />
+				<button id="button" type="submit">SUBMIT</button>
 
 				<span class="smol">thanks, you're a doll.</span>
 
 			</form>
-		</section>
+</section>
 
+		<!--	<div>
+				<label for="profile_pic">Choose file to upload</label>
+				<input
+						type="file"
+						id="profile_pic"
+						name="profile_pic"
+						accept=".jpg, .jpeg, .png" />
+			</div>-->
 
 		</body>
 
