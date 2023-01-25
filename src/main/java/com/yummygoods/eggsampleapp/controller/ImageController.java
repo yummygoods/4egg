@@ -1,3 +1,4 @@
+/*
 package com.yummygoods.eggsampleapp.controller;
 
 import com.yummygoods.eggsampleapp.model.Image;
@@ -30,3 +31,4 @@ public class ImageController {
     }
 }
 
+*/
