@@ -12,7 +12,6 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ResponseStatusException;
 
 @CrossOrigin
-//@RequestMapping(value = "/")
 @RestController
 public class ImageController {
 
@@ -46,6 +45,6 @@ public class ImageController {
 
 
 
-    }
 
+    }
 
