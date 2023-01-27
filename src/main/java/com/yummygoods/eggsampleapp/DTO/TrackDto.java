@@ -1,6 +1,4 @@
-package com.yummygoods.eggsampleapp.TrackDto;
-
-import com.yummygoods.eggsampleapp.model.Track;
+package com.yummygoods.eggsampleapp.DTO;
 
 import java.util.Objects;
 
@@ -10,11 +8,10 @@ public class TrackDto {
     public String notes;
 
 
-    public TrackDto(Integer id, String name, String notes)
-    {
-this.id = id;
-this.name = name;
-this.notes = notes;
+    public TrackDto(Integer id, String name, String notes) {
+        this.id = id;
+        this.name = name;
+        this.notes = notes;
     }
 
     public Integer getId() {
@@ -40,9 +37,9 @@ this.notes = notes;
     public void setNotes(String notes) {
         this.notes = notes;
     }
-}
 
-   /*  @Override
+
+    @Override
     public String toString() {
         return getClass().getSimpleName() + "(" +
                        "ID = " + id + ", " +
@@ -51,9 +48,7 @@ this.notes = notes;
     }
 
 
-
-
-   @Override
+    @Override
     public boolean equals(Object o) {
         if (this == o)
             return true;
@@ -63,6 +58,6 @@ this.notes = notes;
         return Objects.equals(this.id, entity.id) &&
                        Objects.equals(this.name, entity.name) &&
                        Objects.equals(this.notes, entity.notes);
-    }*/
-
+    }
+}
 

@@ -1,31 +1,45 @@
 package com.yummygoods.eggsampleapp.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Lob;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.*;
+
 
 @Entity
-public class Image {
+@Table(name="images", schema="4eggs")
+public class Image{
 
     @Id
     @GeneratedValue
-    Long id;
+    @Column(name = "id", nullable = false, updatable = false)
+    private Integer  id;
 
     @Lob
     byte[] content;
 
+    @Column
     String name;
+    @Column
     String location;
 
 
 
-    public Long getId() {
+    //no args constructor
+    public Image() {
+    }
+
+
+    public Image(Integer id, byte[] content, String name, String location) {
+        this.id = id;
+        this.content = content;
+        this.name = name;
+        this.location = location;
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -54,4 +68,7 @@ public class Image {
     }
 
 
+    public Image save(Image image) {
+        return null;
+    }
 }

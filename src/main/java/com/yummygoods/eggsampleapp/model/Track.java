@@ -1,6 +1,6 @@
 package com.yummygoods.eggsampleapp.model;
 
-import com.yummygoods.eggsampleapp.TrackDto.TrackDto;
+import com.yummygoods.eggsampleapp.DTO.TrackDto;
 import jakarta.persistence.*;
 
 @Entity

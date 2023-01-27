@@ -1,6 +1,6 @@
 package com.yummygoods.eggsampleapp.controller;
 
-import com.yummygoods.eggsampleapp.TrackDto.TrackDto;
+import com.yummygoods.eggsampleapp.DTO.TrackDto;
 import com.yummygoods.eggsampleapp.model.Track;
 import com.yummygoods.eggsampleapp.repository.TrackRepository;
 import com.yummygoods.eggsampleapp.service.TrackService;
