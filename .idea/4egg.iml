@@ -101,5 +101,7 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:3.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:3.0.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.mysql:mysql-connector-j:8.0.31" level="project" />
+    <orderEntry type="library" name="Maven: commons-io:commons-io:2.8.0" level="project" />
+    <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.4" level="project" />
   </component>
 </module>
