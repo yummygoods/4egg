@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(value = "/")
 public class TrackController {
-
    final TrackRepository trackRepository;
 final TrackService trackService;
 
@@ -26,15 +25,10 @@ final TrackService trackService;
     {
         System.out.println("this should get all tracks");
         return trackService.getAll();
-
     }
 
-
-
-
     @PostMapping(value = "/tracks")
-    public Track save( @RequestBody TrackDto trackDto )
-    {
+    public Track save( @RequestBody TrackDto trackDto ) {
         return trackService.save( new Track(trackDto) );
     }
 
